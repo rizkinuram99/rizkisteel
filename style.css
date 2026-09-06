@@ -1,0 +1,290 @@
+/* Pengaturan Umum & Tema Gelap Metalik */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #121212;
+    color: #f0f0f0;
+    overflow-x: hidden;
+}
+
+/* Navigasi */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 8%;
+    background-color: #181818;
+    border-bottom: 2px solid #ff5722;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.brand-rizki {
+    font-size: 22px;
+    font-weight: 900;
+    color: #ffffff;
+}
+
+.brand-steel {
+    font-size: 22px;
+    font-weight: 900;
+    color: #ff5722;
+}
+
+.nav-menu {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: #cccccc;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+.nav-menu a:hover {
+    color: #ff5722;
+}
+
+.nav-cta {
+    background: #ff5722;
+    color: white !important;
+    padding: 8px 20px;
+    border-radius: 4px;
+    transition: background 0.3s;
+}
+
+.nav-cta:hover {
+    background: #e64a19;
+}
+
+/* Hero Section */
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 120px 8% 60px 8%;
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('rizkisteelbc.png');
+    background-size: cover;
+    background-position: center;
+}
+
+.hero-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    gap: 50px;
+}
+
+.hero-left {
+    flex: 1;
+}
+
+.main-logo {
+    font-size: 55px;
+    font-weight: 900;
+    color: #ffffff;
+    line-height: 1.1;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.main-logo span {
+    color: #ff5722;
+}
+
+.logo-sub {
+    font-size: 18px;
+    color: #aaaaaa;
+    letter-spacing: 2px;
+    margin-top: 5px;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.hero-desc {
+    font-size: 16px;
+    color: #b0b0b0;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+}
+
+.btn-primary {
+    background-color: #25d366; /* Warna hijau khas WhatsApp */
+    color: white;
+    padding: 12px 25px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: opacity 0.3s;
+}
+
+.btn-primary:hover {
+    opacity: 0.9;
+}
+
+.btn-secondary {
+    border: 2px solid #ff5722;
+    color: #ff5722;
+    padding: 12px 25px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s;
+}
+
+.btn-secondary:hover {
+    background-color: #ff5722;
+    color: white;
+}
+
+/* Kotak Informasi Kontak di Kanan */
+.hero-right {
+    flex: 0.8;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.info-card {
+    background: #1e1e1e;
+    border-left: 4px solid #ff5722;
+    padding: 20px;
+    border-radius: 6px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+.info-card h3 {
+    font-size: 15px;
+    color: #ff5722;
+    margin-bottom: 5px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.info-card p {
+    font-size: 16px;
+    color: #e0e0e0;
+}
+
+/* Bagian Layanan */
+.services {
+    padding: 80px 8%;
+    background-color: #141414;
+}
+
+.section-header {
+    margin-bottom: 50px;
+}
+
+.section-header h2 {
+    font-size: 32px;
+    color: #ffffff;
+    font-style: italic;
+    letter-spacing: 1px;
+}
+
+.section-header h2 span {
+    color: #ff5722;
+}
+
+.line {
+    width: 80px;
+    height: 4px;
+    background-color: #ff5722;
+    margin-top: 10px;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.service-item {
+    background: #1b1b1b;
+    border: 1px solid #2c2c2c;
+    padding: 20px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    transition: all 0.3s ease;
+}
+
+.service-item:hover {
+    border-color: #ff5722;
+    transform: translateY(-5px);
+    background: #222222;
+}
+
+.service-item i {
+    font-size: 24px;
+    color: #ff5722;
+    min-width: 30px;
+    text-align: center;
+}
+
+.service-item span {
+    font-size: 16px;
+    font-weight: 600;
+    color: #e0e0e0;
+}
+
+/* Footer */
+.footer {
+    background-color: #0b0b0b;
+    padding: 40px 8%;
+    text-align: center;
+    border-top: 1px solid #222;
+}
+
+.footer-content h3 {
+    color: #ff5722;
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.footer-content p {
+    color: #888;
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.copyright {
+    margin-top: 20px;
+    color: #555;
+    font-size: 13px;
+}
+
+/* Responsif untuk HP */
+@media (max-width: 900px) {
+    .hero-container {
+        flex-direction: column;
+    }
+    .main-logo {
+        font-size: 40px;
+    }
+    .nav-menu {
+        display: none; /* Bisa disembunyikan atau diatur ulang untuk mobile */
+    }
+}
