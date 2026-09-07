@@ -10,24 +10,38 @@
 </head>
 <body>
 
-    <!-- Navigasi -->
-    <header class="navbar">
-        <div class="nav-brand" style="display: flex; align-items: center; gap: 10px;">
-            <img src="logors.png" alt="Logo Rizki Steel" style="height: 45px; width: auto;">
-            <div style="display: flex; flex-direction: column; line-height: 1.1;">
-                <span class="brand-rizki">RIZKI <span class="brand-steel">STEEL</span></span>
-                <span style="font-size: 9px; color: #ccc; letter-spacing: 0.5px;">BENGKEL LAS BESI & ALUMINIUM</span>
+    <!-- Navigasi dengan Tombol 3 Baris untuk HP & Tetap Normal di PC -->
+    <header class="navbar" style="display: flex; justify-content: space-between; align-items: center; position: relative;">
+        <div style="display: flex; align-items: center; gap: 12px;">
+            <!-- Tombol Ikon 3 Baris (Hanya muncul di HP) -->
+            <button class="menu-toggle" onclick="toggleMenu()">
+                <i class="fas fa-bars"></i>
+            </button>
+
+            <!-- Logo & Brand -->
+            <div class="nav-brand" style="display: flex; align-items: center; gap: 10px;">
+                <img src="logors.png" alt="Logo Rizki Steel" style="height: 42px; width: auto;">
+                <div style="display: flex; flex-direction: column; line-height: 1.1;">
+                    <span class="brand-rizki" style="font-size: 14px;">RIZKI <span class="brand-steel">STEEL</span></span>
+                    <span style="font-size: 8px; color: #ccc; letter-spacing: 0.5px;">BENGKEL LAS</span>
+                </div>
             </div>
         </div>
+
+        <!-- Daftar Menu (Otomatis menyesuaikan PC dan HP) -->
         <ul class="nav-menu">
-            <li><a href="index.html">Beranda</a></li>
-            <li><a href="produk.html">Produk</a></li>
-            <li><a href="galeri.html">Galeri</a></li>
-            <li><a href="tentang.html">Tentang Kami</a></li>
-            <li><a href="faq.html">FAQ</a></li>
-            <li><a href="kontak.html">Kontak</a></li>
-            <li><a href="lokasi.html" style="color: #ff5722;">Lokasi</a></li>
-            <li><a href="https://wa.me/6285711077124" target="_blank" class="nav-cta">Hubungi Kami</a></li>
+            <li><a href="index.html" style="color: #ff5722; text-decoration: none; font-size: 14px; font-weight: 500;">Beranda</a></li>
+            <li><a href="produk.html" style="color: #fff; text-decoration: none; font-size: 14px; font-weight: 500;">Produk</a></li>
+            <li><a href="galeri.html" style="color: #fff; text-decoration: none; font-size: 14px; font-weight: 500;">Galeri</a></li>
+            <li><a href="tentang.html" style="color: #fff; text-decoration: none; font-size: 14px; font-weight: 500;">Tentang Kami</a></li>
+            <li><a href="faq.html" style="color: #fff; text-decoration: none; font-size: 14px; font-weight: 500;">FAQ</a></li>
+            <li><a href="kontak.html" style="color: #fff; text-decoration: none; font-size: 14px; font-weight: 500;">Kontak</a></li>
+            <li><a href="lokasi.html" style="color: #fff; text-decoration: none; font-size: 14px; font-weight: 500;">Lokasi</a></li>
+            <li>
+                <a href="https://wa.me/6285711077124" target="_blank" style="background: #ff5722; color: white; padding: 6px 14px; border-radius: 4px; text-decoration: none; font-size: 13px; font-weight: bold; display: inline-block;">
+                    WhatsApp
+                </a>
+            </li>
         </ul>
     </header>
 
@@ -78,6 +92,16 @@
             <p class="copyright">&copy; 2026 Rizki Steel. All Rights Reserved.</p>
         </div>
     </footer>
+
+<!-- Skrip untuk Menu 3 Baris HP -->
+    <script>
+        function toggleMenu() {
+            const navMenu = document.querySelector('.nav-menu');
+            navMenu.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>
 
 </body>
 </html>

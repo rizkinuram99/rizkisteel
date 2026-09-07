@@ -282,15 +282,84 @@ body {
     font-size: 13px;
 }
 
-/* Responsif untuk HP */
-@media (max-width: 900px) {
-    .hero-container {
+/* --- Pengaturan Responsif untuk Ponsel (Layar di bawah 768px) --- */
+@media screen and (max-width: 768px) {
+    /* Perkecil ukuran padding dan atur ulang navbar */
+    .navbar {
         flex-direction: column;
+        padding: 10px 15px !important;
+        gap: 8px;
     }
-    .main-logo {
-        font-size: 40px;
+
+    /* Buat menu navigasi bisa digeser ke samping atau tersusun rapi di HP */
+    .nav-menu {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px 12px !important;
+        padding: 0 !important;
+        margin: 5px 0 0 0 !important;
+        list-style: none;
     }
+
+    .nav-menu li a {
+        font-size: 12px !important;
+        padding: 4px 8px !important;
+    }
+
+    /* Sembunyikan tombol CTA besar di header HP jika terlalu padat, atau perkecil */
+    .nav-cta {
+        display: inline-block !important;
+        font-size: 11px !important;
+        padding: 4px 10px !important;
+    }
+
+    /* Penyesuaian Hero Section di HP */
+    .hero-container {
+        flex-direction: column !important;
+        padding-top: 100px !important;
+    }
+
+    /* --- Pengaturan Tombol Menu 3 Baris (Hamburger Menu) --- */
+.menu-toggle {
+    display: none; /* Disembunyikan di PC/Laptop */
+    cursor: pointer;
+    font-size: 24px;
+    color: #fff;
+    background: none;
+    border: none;
+}
+
+/* Hanya aktif khusus di layar HP (lebar di bawah 768px) */
+@media screen and (max-width: 768px) {
+    .menu-toggle {
+        display: block !important; /* Munculkan ikon 3 baris di HP */
+    }
+
+    .navbar {
+        justify-content: space-between !important;
+        padding: 12px 15px !important;
+    }
+
+    /* Menu disembunyikan secara default di HP sebelum ikon diklik */
     .nav-menu {
         display: none;
+        flex-direction: column;
+        width: 100%;
+        background: rgba(15, 15, 15, 0.98);
+        position: absolute;
+        top: 65px;
+        left: 0;
+        padding: 20px 0;
+        border-bottom: 2px solid #ff5722;
+        text-align: center;
+        gap: 15px;
+        box-shadow: 0 10px 20px rgba(0,0,0,0.5);
     }
+
+    /* Ketika ikon 3 baris diklik, kelas 'active' ini terpanggil untuk memunculkan menu */
+    .nav-menu.active {
+        display: flex !important;
+    }
+}
 }
