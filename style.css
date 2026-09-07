@@ -10,7 +10,7 @@ body {
     background-color: #121212;
     color: #f0f0f0;
     overflow-x: hidden;
-}
+}   
 
 /* Navigasi */
 .navbar {
@@ -28,13 +28,13 @@ body {
 
 .brand-rizki {
     font-size: 22px;
-    font-weight: 900;
+    font-weight: 700;   /* Dibuat agak ramping sedikit */
     color: #ffffff;
 }
 
 .brand-steel {
-    font-size: 22px;
-    font-weight: 900;
+    font-size: 21px;   /* Dikecilkan 1 piksel agar proporsional */
+    font-weight: 600;   /* Ketebalan dikurangi agar tidak terlalu "berat" */
     color: #ff5722;
 }
 
@@ -186,10 +186,15 @@ body {
     color: #e0e0e0;
 }
 
-/* Bagian Layanan */
+/* Bagian Layanan & Galeri Produk (Background Industrial) */
+/* Background Bagian Layanan & Galeri menggunakan foto industrial */
 .services {
     padding: 80px 8%;
-    background-color: #141414;
+    background: linear-gradient(rgba(15, 15, 15, 0.90), rgba(15, 15, 15, 0.90)), url('rizkisteelbc.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    border-top: 3px solid #ff5722;
 }
 
 .section-header {
@@ -221,8 +226,8 @@ body {
 }
 
 .service-item {
-    background: #1b1b1b;
-    border: 1px solid #2c2c2c;
+    background: #1a1a1a;
+    border: 1px solid #2a2a2a;
     padding: 20px;
     border-radius: 8px;
     display: flex;
@@ -235,6 +240,7 @@ body {
     border-color: #ff5722;
     transform: translateY(-5px);
     background: #222222;
+    box-shadow: 0 10px 20px rgba(255, 87, 34, 0.2);
 }
 
 .service-item i {
@@ -285,6 +291,6 @@ body {
         font-size: 40px;
     }
     .nav-menu {
-        display: none; /* Bisa disembunyikan atau diatur ulang untuk mobile */
+        display: none;
     }
 }
